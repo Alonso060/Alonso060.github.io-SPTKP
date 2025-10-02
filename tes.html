@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mulai Tes - Sistem Pakar Kecanduan Pornografi</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="bi bi-shield-check"></i>
+                    SPTKP
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="tes.html">Mulai Tes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sumber.html">Sumber Bantuan</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h1 class="mb-4 text-center">Tes Skrining Awal Kecanduan Pornografi</h1>
+                <p class="text-center text-muted">Jawablah setiap pertanyaan berikut sejujur-jujurnya berdasarkan
+                    pengalaman Anda dalam 6 bulan terakhir. Semua jawaban Anda bersifat rahasia dan anonim.</p>
+
+                <div id="validation-alert" class="alert alert-danger mt-4 d-none" role="alert">
+                    <i class="bi bi-exclamation-triangle-fill"></i>
+                    <strong>Error!</strong> Mohon jawab semua pertanyaan sebelum melanjutkan.
+                </div>
+
+                <form id="kuesionerForm" class="mt-4">
+                    <div class="card mb-4">
+                        <div class="card-header">Pertanyaan 1 dari 10</div>
+                        <div class="card-body">
+                            <p class="card-title">Apakah Anda menghabiskan lebih banyak waktu untuk melihat pornografi
+                                daripada yang Anda niatkan?</p>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q1" id="q1a"
+                                    value="0"><label class="form-check-label" for="q1a">Tidak Pernah</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q1" id="q1b"
+                                    value="1"><label class="form-check-label" for="q1b">Jarang</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q1" id="q1c"
+                                    value="2"><label class="form-check-label" for="q1c">Kadang-kadang</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q1" id="q1d"
+                                    value="3"><label class="form-check-label" for="q1d">Sering</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q1" id="q1e"
+                                    value="4"><label class="form-check-label" for="q1e">Hampir Selalu</label></div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">Pertanyaan 2 dari 10</div>
+                        <div class="card-body">
+                            <p class="card-title">Pernahkah Anda mencoba untuk mengurangi atau berhenti melihat
+                                pornografi tetapi tidak berhasil?</p>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q2" id="q2a"
+                                    value="0"><label class="form-check-label" for="q2a">Tidak Pernah</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q2" id="q2b"
+                                    value="1"><label class="form-check-label" for="q2b">Jarang</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q2" id="q2c"
+                                    value="2"><label class="form-check-label" for="q2c">Kadang-kadang</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q2" id="q2d"
+                                    value="3"><label class="form-check-label" for="q2d">Sering</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q2" id="q2e"
+                                    value="4"><label class="form-check-label" for="q2e">Hampir Selalu</label></div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">Pertanyaan 3 dari 10</div>
+                        <div class="card-body">
+                            <p class="card-title">Apakah penggunaan pornografi membuat Anda mengabaikan tanggung jawab
+                                di pekerjaan, sekolah, atau rumah?</p>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q3" id="q3a"
+                                    value="0"><label class="form-check-label" for="q3a">Tidak Pernah</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q3" id="q3b"
+                                    value="1"><label class="form-check-label" for="q3b">Jarang</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q3" id="q3c"
+                                    value="2"><label class="form-check-label" for="q3c">Kadang-kadang</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q3" id="q3d"
+                                    value="3"><label class="form-check-label" for="q3d">Sering</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q3" id="q3e"
+                                    value="4"><label class="form-check-label" for="q3e">Hampir Selalu</label></div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">Pertanyaan 4 dari 10</div>
+                        <div class="card-body">
+                            <p class="card-title">Apakah Anda menggunakan pornografi sebagai cara untuk lari dari
+                                perasaan negatif (stres, cemas, sedih)?</p>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q4" id="q4a"
+                                    value="0"><label class="form-check-label" for="q4a">Tidak Pernah</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q4" id="q4b"
+                                    value="1"><label class="form-check-label" for="q4b">Jarang</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q4" id="q4c"
+                                    value="2"><label class="form-check-label" for="q4c">Kadang-kadang</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q4" id="q4d"
+                                    value="3"><label class="form-check-label" for="q4d">Sering</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q4" id="q4e"
+                                    value="4"><label class="form-check-label" for="q4e">Hampir Selalu</label></div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">Pertanyaan 5 dari 10</div>
+                        <div class="card-body">
+                            <p class="card-title">Apakah Anda terus melihat pornografi meskipun Anda sadar akan
+                                konsekuensi negatif yang ditimbulkannya?</p>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q5" id="q5a"
+                                    value="0"><label class="form-check-label" for="q5a">Tidak Pernah</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q5" id="q5b"
+                                    value="1"><label class="form-check-label" for="q5b">Jarang</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q5" id="q5c"
+                                    value="2"><label class="form-check-label" for="q5c">Kadang-kadang</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q5" id="q5d"
+                                    value="3"><label class="form-check-label" for="q5d">Sering</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q5" id="q5e"
+                                    value="4"><label class="form-check-label" for="q5e">Hampir Selalu</label></div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">Pertanyaan 6 dari 10</div>
+                        <div class="card-body">
+                            <p class="card-title">Apakah Anda menyembunyikan atau berbohong tentang seberapa sering Anda
+                                melihat pornografi kepada orang lain?</p>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q6" id="q6a"
+                                    value="0"><label class="form-check-label" for="q6a">Tidak Pernah</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q6" id="q6b"
+                                    value="1"><label class="form-check-label" for="q6b">Jarang</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q6" id="q6c"
+                                    value="2"><label class="form-check-label" for="q6c">Kadang-kadang</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q6" id="q6d"
+                                    value="3"><label class="form-check-label" for="q6d">Sering</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q6" id="q6e"
+                                    value="4"><label class="form-check-label" for="q6e">Hampir Selalu</label></div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">Pertanyaan 7 dari 10</div>
+                        <div class="card-body">
+                            <p class="card-title">Apakah Anda sering memikirkan pornografi bahkan ketika Anda tidak
+                                sedang melihatnya?</p>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q7" id="q7a"
+                                    value="0"><label class="form-check-label" for="q7a">Tidak Pernah</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q7" id="q7b"
+                                    value="1"><label class="form-check-label" for="q7b">Jarang</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q7" id="q7c"
+                                    value="2"><label class="form-check-label" for="q7c">Kadang-kadang</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q7" id="q7d"
+                                    value="3"><label class="form-check-label" for="q7d">Sering</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q7" id="q7e"
+                                    value="4"><label class="form-check-label" for="q7e">Hampir Selalu</label></div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">Pertanyaan 8 dari 10</div>
+                        <div class="card-body">
+                            <p class="card-title">Apakah Anda kehilangan minat pada hobi atau aktivitas lain yang dulu
+                                Anda nikmati karena pornografi?</p>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q8" id="q8a"
+                                    value="0"><label class="form-check-label" for="q8a">Tidak Pernah</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q8" id="q8b"
+                                    value="1"><label class="form-check-label" for="q8b">Jarang</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q8" id="q8c"
+                                    value="2"><label class="form-check-label" for="q8c">Kadang-kadang</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q8" id="q8d"
+                                    value="3"><label class="form-check-label" for="q8d">Sering</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q8" id="q8e"
+                                    value="4"><label class="form-check-label" for="q8e">Hampir Selalu</label></div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">Pertanyaan 9 dari 10</div>
+                        <div class="card-body">
+                            <p class="card-title">Apakah penggunaan pornografi telah menyebabkan masalah dalam hubungan
+                                romantis atau sosial Anda?</p>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q9" id="q9a"
+                                    value="0"><label class="form-check-label" for="q9a">Tidak Pernah</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q9" id="q9b"
+                                    value="1"><label class="form-check-label" for="q9b">Jarang</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q9" id="q9c"
+                                    value="2"><label class="form-check-label" for="q9c">Kadang-kadang</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q9" id="q9d"
+                                    value="3"><label class="form-check-label" for="q9d">Sering</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q9" id="q9e"
+                                    value="4"><label class="form-check-label" for="q9e">Hampir Selalu</label></div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">Pertanyaan 10 dari 10</div>
+                        <div class="card-body">
+                            <p class="card-title">Apakah Anda merasa perlu melihat materi yang lebih sering atau lebih
+                                ekstrem untuk mendapatkan kepuasan yang sama?</p>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q10" id="q10a"
+                                    value="0"><label class="form-check-label" for="q10a">Tidak Pernah</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q10" id="q10b"
+                                    value="1"><label class="form-check-label" for="q10b">Jarang</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q10" id="q10c"
+                                    value="2"><label class="form-check-label" for="q10c">Kadang-kadang</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q10" id="q10d"
+                                    value="3"><label class="form-check-label" for="q10d">Sering</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="q10" id="q10e"
+                                    value="4"><label class="form-check-label" for="q10e">Hampir Selalu</label></div>
+                        </div>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">Lihat Hasil Analisis</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-dark text-white">
+        <div class="container text-center">
+            <span class="text-muted">&copy; 2025 Sistem Pakar Kecanduan Pornografi. Hak Cipta Dilindungi.</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Ambil elemen form dari DOM
+        const kuesionerForm = document.getElementById('kuesionerForm');
+        const validationAlert = document.getElementById('validation-alert');
+        const jumlahPertanyaan = 10;
+
+        // Tambahkan event listener untuk event 'submit'
+        kuesionerForm.addEventListener('submit', function (event) {
+            // Mencegah perilaku default form (yang akan me-reload halaman)
+            event.preventDefault();
+
+            let totalSkor = 0;
+            let semuaDijawab = true;
+
+            // 1. Validasi: Periksa apakah semua pertanyaan sudah dijawab
+            for (let i = 1; i <= jumlahPertanyaan; i++) {
+                // Cari radio button yang dipilih untuk pertanyaan ke-i
+                const jawabanDipilih = document.querySelector(`input[name="q${i}"]:checked`);
+
+                if (jawabanDipilih === null) {
+                    // Jika ada pertanyaan yang belum dijawab, set flag dan hentikan loop
+                    semuaDijawab = false;
+                    break;
+                }
+            }
+
+            // Jika ada yang belum dijawab, tampilkan pesan error
+            if (!semuaDijawab) {
+                validationAlert.classList.remove('d-none'); // Tampilkan alert
+                window.scrollTo(0, 0); // Gulir ke atas agar pengguna melihat pesan
+                return; // Hentikan eksekusi fungsi
+            }
+
+            // Sembunyikan pesan error jika semua sudah terjawab
+            validationAlert.classList.add('d-none');
+
+            // 2. Kalkulasi Skor: Jika validasi berhasil, hitung total skor
+            for (let i = 1; i <= jumlahPertanyaan; i++) {
+                const jawabanDipilih = document.querySelector(`input[name="q${i}"]:checked`);
+                // Tambahkan nilai dari jawaban yang dipilih ke total skor
+                // parseInt() mengubah string value dari input menjadi angka integer
+                totalSkor += parseInt(jawabanDipilih.value, 10);
+            }
+
+            // 3. Simpan Skor ke localStorage
+            // localStorage adalah penyimpanan di sisi browser yang persisten
+            localStorage.setItem('skorTes', totalSkor);
+
+            // 4. Arahkan Pengguna ke Halaman Hasil
+            // Ganti URL ke halaman hasil Anda
+            window.location.href = 'hasil.html';
+        });
+    </script>
+
+</body>
+
+</html>
